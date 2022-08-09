@@ -31,7 +31,6 @@ public class SuccessHandler implements AuthenticationSuccessHandler {
         AjaxResult ajax = AjaxResult.success();
 
         LoginUser loginUser = (LoginUser) authentication.getPrincipal();
-        System.out.println(loginUser);
 
         ajax.put(Constants.TOKEN, tokenService.createToken(loginUser));
 
